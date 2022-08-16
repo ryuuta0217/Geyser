@@ -46,6 +46,8 @@ public interface GeyserConfiguration {
 
     List<String> getSavedUserLogins();
 
+    boolean isAlwaysSaveUserLogins();
+
     @Deprecated
     Map<String, ? extends IUserAuthenticationInfo> getUserAuths();
 

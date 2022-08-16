@@ -72,9 +72,11 @@ floodgate-key-file: key.pem
 # but you should still be cautious when adding to this list and giving others access to this Geyser instance's files.
 # Removing a name from this list will delete its cached login information on the next Geyser startup.
 # The file for this is in the same folder as this config, named "saved-refresh-tokens.json".
+# If needed to always save the refresh token, set always-save-refresh-token to true. (Not recommended)
 saved-user-logins:
   - ThisExampleUsernameShouldBeLongEnoughToNeverBeAnXboxUsername
   - ThisOtherExampleUsernameShouldAlsoBeLongEnough
+always-save-user-logins: false
 
 # Specify how many seconds to wait while user authorizes Geyser to access their Microsoft account.
 # User is allowed to disconnect from the server during this period.

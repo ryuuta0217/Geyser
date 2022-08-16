@@ -450,7 +450,7 @@ public class GeyserImpl implements GeyserApi {
                     boolean doWrite = false;
                     for (Map.Entry<String, String> entry : refreshTokenFile.entrySet()) {
                         String user = entry.getKey();
-                        if (!validUsers.contains(user)) {
+                        if (!config.isAlwaysSaveUserLogins() && !validUsers.contains(user)) {
                             // Perform a write to this file to purge the now-unused name
                             doWrite = true;
                             continue;
@@ -579,7 +579,7 @@ public class GeyserImpl implements GeyserApi {
     }
 
     public void saveRefreshToken(@NonNull String bedrockName, @NonNull String refreshToken) {
-        if (!getConfig().getSavedUserLogins().contains(bedrockName)) {
+        if (!getConfig().isAlwaysSaveUserLogins() && !getConfig().getSavedUserLogins().contains(bedrockName)) {
             // Do not save this login
             return;
         }

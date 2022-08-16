@@ -65,6 +65,9 @@ public abstract class GeyserJacksonConfiguration implements GeyserConfiguration 
     @JsonProperty("saved-user-logins")
     private List<String> savedUserLogins = Collections.emptyList();
 
+    @JsonProperty("always-save-user-logins")
+    private boolean alwaysSaveUserLogins = false;
+
     @JsonProperty("floodgate-key-file")
     private String floodgateKeyFile = "key.pem";
 
